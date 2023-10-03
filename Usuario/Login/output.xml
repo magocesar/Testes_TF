@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.2 on win32)" generated="20231003 15:52:35.462" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="F:\Trabalho-Flood-Fill\Testes_TF\Usuario\Login\login.robot">
+<test id="s1-t1" name="Realizar Login com Sucesso" line="14">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 15:52:35.660" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:52:35.659" endtime="20231003 15:52:37.280"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 15:52:37.280" endtime="20231003 15:52:37.393"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231003 15:52:37.394" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:52:37.394" endtime="20231003 15:52:37.435"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${idLogin}</arg>
+<arg>text=cesar@gmail</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:37.436" level="INFO">Typing text 'cesar@gmail' into text field 'nomeLogin'.</msg>
+<status status="PASS" starttime="20231003 15:52:37.436" endtime="20231003 15:52:37.509"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${idSenha}</arg>
+<arg>text=123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:37.510" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
+<status status="PASS" starttime="20231003 15:52:37.509" endtime="20231003 15:52:37.558"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231003 15:52:37.677" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:52:37.558" endtime="20231003 15:52:37.677"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:37.678" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:52:37.677" endtime="20231003 15:52:37.815"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20231003 15:52:37.820" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/homepage.php</msg>
+<status status="PASS" starttime="20231003 15:52:37.815" endtime="20231003 15:52:37.820"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${HOME URL}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231003 15:52:37.820" endtime="20231003 15:52:37.820"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Olá, César Willian Pacheco</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20231003 15:52:37.832" level="INFO">Current page contains text 'Olá, César Willian Pacheco'.</msg>
+<status status="PASS" starttime="20231003 15:52:37.821" endtime="20231003 15:52:37.832"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231003 15:52:37.937" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:52:37.833" endtime="20231003 15:52:37.937"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231003 15:52:37.937" endtime="20231003 15:52:40.008"/>
+</kw>
+<status status="PASS" starttime="20231003 15:52:35.659" endtime="20231003 15:52:40.008"/>
+</test>
+<test id="s1-t2" name="Realizar Login sem senha" line="28">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 15:52:40.010" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:52:40.010" endtime="20231003 15:52:41.577"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 15:52:41.577" endtime="20231003 15:52:41.691"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231003 15:52:41.692" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:52:41.692" endtime="20231003 15:52:41.733"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${idLogin}</arg>
+<arg>text=cesar@gmail</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:41.735" level="INFO">Typing text 'cesar@gmail' into text field 'nomeLogin'.</msg>
+<status status="PASS" starttime="20231003 15:52:41.734" endtime="20231003 15:52:41.808"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231003 15:52:41.924" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:52:41.809" endtime="20231003 15:52:41.924"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:41.925" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:52:41.924" endtime="20231003 15:52:42.072"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20231003 15:52:42.073" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231003 15:52:42.076" level="INFO">${message} = E-mail ou senha Inválidos</msg>
+<status status="PASS" starttime="20231003 15:52:42.073" endtime="20231003 15:52:42.076"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${msgAlertLogin}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231003 15:52:42.077" endtime="20231003 15:52:42.077"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231003 15:52:42.078" endtime="20231003 15:52:44.163"/>
+</kw>
+<status status="PASS" starttime="20231003 15:52:40.009" endtime="20231003 15:52:44.163"/>
+</test>
+<test id="s1-t3" name="Realizar Login sem e-mail" line="39">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 15:52:44.165" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:52:44.165" endtime="20231003 15:52:45.732"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 15:52:45.732" endtime="20231003 15:52:45.849"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231003 15:52:45.850" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:52:45.850" endtime="20231003 15:52:45.901"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=${idSenha}</arg>
+<arg>text=123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:45.903" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
+<status status="PASS" starttime="20231003 15:52:45.902" endtime="20231003 15:52:45.974"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231003 15:52:46.091" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:52:45.974" endtime="20231003 15:52:46.091"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:46.092" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:52:46.091" endtime="20231003 15:52:46.192"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20231003 15:52:46.192" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231003 15:52:46.196" level="INFO">${message} = Email não encontrado</msg>
+<status status="PASS" starttime="20231003 15:52:46.192" endtime="20231003 15:52:46.196"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${msgAlertLogin}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231003 15:52:46.196" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
+<status status="FAIL" starttime="20231003 15:52:46.196" endtime="20231003 15:52:46.196"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231003 15:52:46.196" endtime="20231003 15:52:46.196"/>
+</kw>
+<status status="FAIL" starttime="20231003 15:52:44.164" endtime="20231003 15:52:46.197">Email não encontrado != E-mail ou senha Inválidos</status>
+</test>
+<test id="s1-t4" name="Realizar Login sem e-mail e senha" line="50">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231003 15:52:46.198" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:52:46.198" endtime="20231003 15:52:47.972"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231003 15:52:47.973" endtime="20231003 15:52:48.082"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${LOGIN URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231003 15:52:48.083" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:52:48.083" endtime="20231003 15:52:48.130"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231003 15:52:48.271" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:52:48.130" endtime="20231003 15:52:48.271"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>locator=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231003 15:52:48.272" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:52:48.272" endtime="20231003 15:52:48.357"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20231003 15:52:48.357" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231003 15:52:48.361" level="INFO">${message} = Email não encontrado</msg>
+<status status="PASS" starttime="20231003 15:52:48.357" endtime="20231003 15:52:48.361"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${msgAlertLogin}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231003 15:52:48.362" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
+<status status="FAIL" starttime="20231003 15:52:48.362" endtime="20231003 15:52:48.362"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20231003 15:52:48.362" endtime="20231003 15:52:48.362"/>
+</kw>
+<status status="FAIL" starttime="20231003 15:52:46.198" endtime="20231003 15:52:48.363">Email não encontrado != E-mail ou senha Inválidos</status>
+</test>
+<doc>Casos de Testes para Login de Usuário</doc>
+<status status="FAIL" starttime="20231003 15:52:35.463" endtime="20231003 15:52:48.364"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="2" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

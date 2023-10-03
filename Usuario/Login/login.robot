@@ -44,8 +44,8 @@ Realizar Login sem e-mail
     Capture Page Screenshot
     Click Button    locator=//button[@type='submit']
     ${message}=    Handle Alert    Accept
-    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
     Close Browser
+    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
 
 Realizar Login sem e-mail e senha
     Open Browser    browser=${BROWSER}
@@ -54,5 +54,5 @@ Realizar Login sem e-mail e senha
     Capture Page Screenshot
     Click Button    locator=//button[@type='submit']
     ${message}=    Handle Alert    Accept
-    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
     Close Browser
+    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
