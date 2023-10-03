@@ -1,250 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231002 22:30:21.930" rpa="false" schemaversion="4">
-<suite id="s1" name="Login" source="C:\Users\vboxuser\Desktop\Testes_TF\Usuario\Login\login.robot">
+<robot generator="Robot 6.1.1 (Python 3.10.2 on win32)" generated="20231003 15:48:44.717" rpa="false" schemaversion="4">
+<suite id="s1" name="Login" source="F:\Trabalho-Flood-Fill\Testes_TF\Usuario\Login\login.robot">
 <test id="s1-t1" name="Realizar Login com Sucesso" line="14">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231002 22:30:22.316" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20231002 22:30:22.315" endtime="20231002 22:30:23.853"/>
+<msg timestamp="20231003 15:48:44.920" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:48:44.920" endtime="20231003 15:48:49.978"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231002 22:30:23.853" endtime="20231002 22:30:23.998"/>
+<status status="PASS" starttime="20231003 15:48:49.979" endtime="20231003 15:48:50.098"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${LOGIN URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231002 22:30:24.000" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231002 22:30:24.000" endtime="20231002 22:30:24.090"/>
+<msg timestamp="20231003 15:48:50.098" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<msg timestamp="20231003 15:48:54.988" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231003 15:48:54.988" level="FAIL">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=117.0.5938.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E0657892+54818]
+	(No symbol) [0x00007FF6E05C6AC2]
+	(No symbol) [0x00007FF6E047DA3B]
+	(No symbol) [0x00007FF6E0479853]
+	(No symbol) [0x00007FF6E046CB9C]
+	(No symbol) [0x00007FF6E046DDF7]
+	(No symbol) [0x00007FF6E046CF95]
+	(No symbol) [0x00007FF6E046C00E]
+	(No symbol) [0x00007FF6E046BFB3]
+	(No symbol) [0x00007FF6E046A82E]
+	(No symbol) [0x00007FF6E046B123]
+	(No symbol) [0x00007FF6E047FE4F]
+	(No symbol) [0x00007FF6E04F7917]
+	(No symbol) [0x00007FF6E04DEAAA]
+	(No symbol) [0x00007FF6E04F75A2]
+	(No symbol) [0x00007FF6E04DE883]
+	(No symbol) [0x00007FF6E04B3691]
+	(No symbol) [0x00007FF6E04B48D4]
+	GetHandleVerifier [0x00007FF6E09BB992+3610402]
+	GetHandleVerifier [0x00007FF6E0A11860+3962352]
+	GetHandleVerifier [0x00007FF6E0A09D4F+3930847]
+	GetHandleVerifier [0x00007FF6E06F3646+693206]
+	(No symbol) [0x00007FF6E05D1628]
+	(No symbol) [0x00007FF6E05CD934]
+	(No symbol) [0x00007FF6E05CDA62]
+	(No symbol) [0x00007FF6E05BE113]
+	BaseThreadInitThunk [0x00007FFB05DD7344+20]
+	RtlUserThreadStart [0x00007FFB071226B1+33]
+</msg>
+<status status="FAIL" starttime="20231003 15:48:50.098" endtime="20231003 15:48:54.989"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${idLogin}</arg>
 <arg>text=cesar@gmail</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:24.102" level="INFO">Typing text 'cesar@gmail' into text field 'nomeLogin'.</msg>
-<status status="PASS" starttime="20231002 22:30:24.090" endtime="20231002 22:30:24.319"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.990" endtime="20231003 15:48:54.990"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${idSenha}</arg>
 <arg>text=123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:24.320" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
-<status status="PASS" starttime="20231002 22:30:24.320" endtime="20231002 22:30:24.422"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.990" endtime="20231003 15:48:54.990"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231002 22:30:24.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231002 22:30:24.424" endtime="20231002 22:30:24.587"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.990" endtime="20231003 15:48:54.990"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>locator=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:24.587" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231002 22:30:24.587" endtime="20231002 22:30:24.794"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.990" endtime="20231003 15:48:54.990"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20231002 22:30:24.795" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/homepage.php</msg>
-<status status="PASS" starttime="20231002 22:30:24.795" endtime="20231002 22:30:24.795"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.990" endtime="20231003 15:48:54.991"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${HOME URL}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231002 22:30:24.795" endtime="20231002 22:30:24.795"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.991" endtime="20231003 15:48:54.991"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Olá, César Willian Pacheco</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231002 22:30:24.821" level="INFO">Current page contains text 'Olá, César Willian Pacheco'.</msg>
-<status status="PASS" starttime="20231002 22:30:24.795" endtime="20231002 22:30:24.821"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.991" endtime="20231003 15:48:54.991"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231002 22:30:25.012" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231002 22:30:24.823" endtime="20231002 22:30:25.013"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.991" endtime="20231003 15:48:54.991"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231002 22:30:25.013" endtime="20231002 22:30:27.183"/>
+<status status="NOT RUN" starttime="20231003 15:48:54.991" endtime="20231003 15:48:54.991"/>
 </kw>
-<status status="PASS" starttime="20231002 22:30:22.314" endtime="20231002 22:30:27.185"/>
+<status status="FAIL" starttime="20231003 15:48:44.919" endtime="20231003 15:48:54.991">WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=117.0.5938.92)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6E0657892+54818]
+	(No symbol) [0x00007FF6E05C6AC2]
+	(No symbol) [0x00007FF6E047DA3B]
+	(No symbol) [0x00007FF6E0479853]
+	(No symbol) [0x00007FF6E046CB9C]
+	(No symbol) [0x00007FF6E046DDF7]
+	(No symbol) [0x00007FF6E046CF95]
+	(No symbol) [0x00007FF6E046C00E]
+	(No symbol) [0x00007FF6E046BFB3]
+	(No symbol) [0x00007FF6E046A82E]
+	(No symbol) [0x00007FF6E046B123]
+	(No symbol) [0x00007FF6E047FE4F]
+	(No symbol) [0x00007FF6E04F7917]
+	(No symbol) [0x00007FF6E04DEAAA]
+	(No symbol) [0x00007FF6E04F75A2]
+	(No symbol) [0x00007FF6E04DE883]
+	(No symbol) [0x00007FF6E04B3691]
+	(No symbol) [0x00007FF6E04B48D4]
+	GetHandleVerifier [0x00007FF6E09BB992+3610402]
+	GetHandleVerifier [0x00007FF6E0A11860+3962352]
+	GetHandleVerifier [0x00007FF6E0A09D4F+3930847]
+	GetHandleVerifier [0x00007FF6E06F3646+693206]
+	(No symbol) [0x00007FF6E05D1628]
+	(No symbol) [0x00007FF6E05CD934]
+	(No symbol) [0x00007FF6E05CDA62]
+	(No symbol) [0x00007FF6E05BE113]
+	BaseThreadInitThunk [0x00007FFB05DD7344+20]
+	RtlUserThreadStart [0x00007FFB071226B1+33]
+</status>
 </test>
 <test id="s1-t2" name="Realizar Login sem senha" line="28">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231002 22:30:27.187" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20231002 22:30:27.187" endtime="20231002 22:30:28.542"/>
+<msg timestamp="20231003 15:48:54.994" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:48:54.994" endtime="20231003 15:48:56.666"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231002 22:30:28.543" endtime="20231002 22:30:28.679"/>
+<status status="PASS" starttime="20231003 15:48:56.666" endtime="20231003 15:48:56.782"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${LOGIN URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231002 22:30:28.679" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231002 22:30:28.679" endtime="20231002 22:30:28.789"/>
+<msg timestamp="20231003 15:48:56.783" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<msg timestamp="20231003 15:49:03.364" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F2DD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:07.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F1960&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:11.552" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F1930&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:15.612" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=58081): Max retries exceeded with url: /session/46c64caad97980480431375b4de9970a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F0B50&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<msg timestamp="20231003 15:49:15.613" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</msg>
+<status status="FAIL" starttime="20231003 15:48:56.783" endtime="20231003 15:49:15.676"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${idLogin}</arg>
 <arg>text=cesar@gmail</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:28.803" level="INFO">Typing text 'cesar@gmail' into text field 'nomeLogin'.</msg>
-<status status="PASS" starttime="20231002 22:30:28.803" endtime="20231002 22:30:29.023"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.677" endtime="20231003 15:49:15.677"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231002 22:30:29.174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231002 22:30:29.023" endtime="20231002 22:30:29.174"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.677" endtime="20231003 15:49:15.677"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>locator=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:29.174" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231002 22:30:29.174" endtime="20231002 22:30:29.379"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.677" endtime="20231003 15:49:15.678"/>
 </kw>
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${message}</var>
 <arg>Accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20231002 22:30:29.380" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20231002 22:30:29.385" level="INFO">${message} = E-mail ou senha Inválidos</msg>
-<status status="PASS" starttime="20231002 22:30:29.380" endtime="20231002 22:30:29.385"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.678" endtime="20231003 15:49:15.678"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${message}</arg>
 <arg>${msgAlertLogin}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231002 22:30:29.387" endtime="20231002 22:30:29.387"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.678" endtime="20231003 15:49:15.678"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231002 22:30:29.388" endtime="20231002 22:30:31.543"/>
+<status status="NOT RUN" starttime="20231003 15:49:15.678" endtime="20231003 15:49:15.678"/>
 </kw>
-<status status="PASS" starttime="20231002 22:30:27.187" endtime="20231002 22:30:31.543"/>
+<status status="FAIL" starttime="20231003 15:48:54.994" endtime="20231003 15:49:15.678">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</status>
 </test>
 <test id="s1-t3" name="Realizar Login sem e-mail" line="39">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231002 22:30:31.543" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20231002 22:30:31.543" endtime="20231002 22:30:32.922"/>
+<msg timestamp="20231003 15:49:15.680" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:49:15.680" endtime="20231003 15:49:17.280"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231002 22:30:32.923" endtime="20231002 22:30:33.056"/>
+<status status="PASS" starttime="20231003 15:49:17.281" endtime="20231003 15:49:17.393"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${LOGIN URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231002 22:30:33.056" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231002 22:30:33.056" endtime="20231002 22:30:33.185"/>
+<msg timestamp="20231003 15:49:17.394" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:49:17.394" endtime="20231003 15:49:18.497"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>locator=${idSenha}</arg>
 <arg>text=123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:33.186" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
-<status status="PASS" starttime="20231002 22:30:33.186" endtime="20231002 22:30:33.382"/>
+<msg timestamp="20231003 15:49:18.498" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
+<status status="PASS" starttime="20231003 15:49:18.497" endtime="20231003 15:49:18.586"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231002 22:30:33.534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231002 22:30:33.383" endtime="20231002 22:30:33.534"/>
+<msg timestamp="20231003 15:49:18.721" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:49:18.586" endtime="20231003 15:49:18.721"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>locator=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:33.534" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231002 22:30:33.534" endtime="20231002 22:30:33.664"/>
+<msg timestamp="20231003 15:49:18.722" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:49:18.722" endtime="20231003 15:49:19.173"/>
 </kw>
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${message}</var>
 <arg>Accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20231002 22:30:33.664" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20231002 22:30:33.672" level="INFO">${message} = Email não encontrado</msg>
-<status status="PASS" starttime="20231002 22:30:33.664" endtime="20231002 22:30:33.672"/>
+<msg timestamp="20231003 15:49:19.174" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231003 15:49:19.177" level="INFO">${message} = Email não encontrado</msg>
+<status status="PASS" starttime="20231003 15:49:19.174" endtime="20231003 15:49:19.177"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${message}</arg>
 <arg>${msgAlertLogin}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231002 22:30:33.673" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
-<status status="FAIL" starttime="20231002 22:30:33.673" endtime="20231002 22:30:33.673"/>
+<msg timestamp="20231003 15:49:19.178" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
+<status status="FAIL" starttime="20231003 15:49:19.177" endtime="20231003 15:49:19.178"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20231002 22:30:33.675" endtime="20231002 22:30:33.675"/>
+<status status="NOT RUN" starttime="20231003 15:49:19.178" endtime="20231003 15:49:19.178"/>
 </kw>
-<status status="FAIL" starttime="20231002 22:30:31.543" endtime="20231002 22:30:33.676">Email não encontrado != E-mail ou senha Inválidos</status>
+<status status="FAIL" starttime="20231003 15:49:15.679" endtime="20231003 15:49:19.178">Email não encontrado != E-mail ou senha Inválidos</status>
 </test>
 <test id="s1-t4" name="Realizar Login sem e-mail e senha" line="50">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231002 22:30:33.680" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20231002 22:30:33.678" endtime="20231002 22:30:35.076"/>
+<msg timestamp="20231003 15:49:19.181" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231003 15:49:19.181" endtime="20231003 15:49:20.811"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231002 22:30:35.077" endtime="20231002 22:30:35.202"/>
+<status status="PASS" starttime="20231003 15:49:20.811" endtime="20231003 15:49:20.927"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>url=${LOGIN URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231002 22:30:35.202" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231002 22:30:35.202" endtime="20231002 22:30:35.284"/>
+<msg timestamp="20231003 15:49:20.928" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231003 15:49:20.928" endtime="20231003 15:49:22.184"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231002 22:30:35.478" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231002 22:30:35.286" endtime="20231002 22:30:35.478"/>
+<msg timestamp="20231003 15:49:22.334" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231003 15:49:22.185" endtime="20231003 15:49:22.334"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>locator=//button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231002 22:30:35.479" level="INFO">Clicking button '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20231002 22:30:35.479" endtime="20231002 22:30:35.629"/>
+<msg timestamp="20231003 15:49:22.335" level="INFO">Clicking button '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20231003 15:49:22.335" endtime="20231003 15:49:22.430"/>
 </kw>
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${message}</var>
 <arg>Accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20231002 22:30:35.630" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20231002 22:30:35.636" level="INFO">${message} = Email não encontrado</msg>
-<status status="PASS" starttime="20231002 22:30:35.630" endtime="20231002 22:30:35.636"/>
+<msg timestamp="20231003 15:49:22.431" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231003 15:49:22.434" level="INFO">${message} = Email não encontrado</msg>
+<status status="PASS" starttime="20231003 15:49:22.431" endtime="20231003 15:49:22.434"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${message}</arg>
 <arg>${msgAlertLogin}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<msg timestamp="20231002 22:30:35.637" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
-<status status="FAIL" starttime="20231002 22:30:35.637" endtime="20231002 22:30:35.637"/>
+<msg timestamp="20231003 15:49:22.435" level="FAIL">Email não encontrado != E-mail ou senha Inválidos</msg>
+<status status="FAIL" starttime="20231003 15:49:22.434" endtime="20231003 15:49:22.435"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" starttime="20231002 22:30:35.638" endtime="20231002 22:30:35.638"/>
+<status status="NOT RUN" starttime="20231003 15:49:22.435" endtime="20231003 15:49:22.436"/>
 </kw>
-<status status="FAIL" starttime="20231002 22:30:33.677" endtime="20231002 22:30:35.638">Email não encontrado != E-mail ou senha Inválidos</status>
+<status status="FAIL" starttime="20231003 15:49:19.180" endtime="20231003 15:49:22.436">Email não encontrado != E-mail ou senha Inválidos</status>
 </test>
 <doc>Casos de Testes para Login de Usuário</doc>
-<status status="FAIL" starttime="20231002 22:30:21.930" endtime="20231002 22:30:35.640"/>
+<status status="FAIL" starttime="20231003 15:48:44.719" endtime="20231003 15:49:22.439"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="2" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231003 15:49:03.364" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F2DD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:07.457" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F1960&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:11.552" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F1930&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/46c64caad97980480431375b4de9970a/screenshot</msg>
+<msg timestamp="20231003 15:49:15.612" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=58081): Max retries exceeded with url: /session/46c64caad97980480431375b4de9970a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000023D802F0B50&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
 </errors>
 </robot>
