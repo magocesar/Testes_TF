@@ -23,14 +23,5 @@ CT2 - Realizar cadastro de usuario
 	Acionar o botão entrar
 	Verificar mensagem de falha no login
 
-CT3 - Realizar login com usuario misturado
-	[Documentation]		Esse teste executa o login com o nome de usuario ativo mas senha de usuario inativo 
-	[Tags]				login_misturado
-	Acessar a pagina home do site
-	Digitar no campo usuário o usuário ativo
-	Digitar no campo senha a senha o usuário inativo
-	Acionar o botão entrar
-	Verificar mensagem de falha no login
-	
 
 
