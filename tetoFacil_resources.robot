@@ -4,11 +4,12 @@ Library	SeleniumLibrary
 *** Variables ***
 ${BROWSER}	chrome 
 ${URL}		http://165.227.93.41/lojinha-web/
-${USUARIO_ATIVO}	rafael
-${SENHA_ATIVA}		123456
+${EMAIL_USER}	rafael@gmail.com
+${SENHA_LOGIN}		123456
+${SENHA_CONFIRMACAO}	123456
 ${FULL_NAME}	Rafael de Sousa
-${USUARIO_INATIVO}	paulo
-${SENHA_INATIVA}	111111
+${CPF}	132.776.990-02
+
 
 
 
@@ -25,26 +26,33 @@ Acessar a pagina home do site
 	Go To	url=${URL}
 
 Digitar no campo usuário o usuário ativo
-	Input Text	css:input[name=usuario]        ${USUARIO_ATIVO}
+	Input Text	locator=nomeLogin       ${USUARIO_ATIVO}
 
 Digitar no campo senha a senha o usuário ativo
-	Input Text	css:input[name=senha]          ${SENHA_ATIVA}
+	Input Text	locator=senhaLogin          ${SENHA_LOGIN}
 
 Acionar o botão entrar
-	Click Element	css:button[name='action']
+	Click Element	locator=sendLoginButton
 
-Verificar se nome do usuário aparece na tela de boas vindas
-	Page Should Contain	Boas vindas, ${FULL_NAME}!
+Digitar no campo nome de cadastro 
+  Input Text	css:input[name=name]        ${FULL_NAME}
 
-Digitar no campo usuário o usuário inativo
-	Input Text	css:input[name=usuario]        ${USUARIO_INATIVO}
+Digitar no campo email de cadastro
+  Input Text	locator=emailCad      ${EMAIL_USER}
 
-Digitar no campo senha a senha o usuário inativo
-	Input Text	css:input[name=senha]	${SENHA_INATIVA}
+Digitar no campo cpf de cadastro
+  Input Text	locator=cpfCad        ${CPF}
 
-Verificar mensagem de falha no login
-	${MENSAGEM_TELA}=	Get webElement	id:toast-container
-	Should Contain	${MENSAGEM_TELA.text}	${MENSAGEM_FALHA_LOGIN}
+Digitar no campo senha de cadastro 
+  Input Text	locator=senhaCad        ${SENHA_LOGIN}
+
+Digitar no campo confirmação de senha de cadastro
+  Input Text	locator=senhaConf        ${SENHA_CONFIRMACAO}
+
+Acionar o botão cadastrar
+  Click Element	locator=sendCadButton
+
+
 
 
 
