@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Essa suíte testa o site teto facil 
-Resource         tetoFacil_resources.robot
+Resource         cadastroCorretor_resources.robot
 Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
