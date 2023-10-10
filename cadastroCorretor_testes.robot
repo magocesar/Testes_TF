@@ -7,21 +7,17 @@ Test Teardown    Fechar o navegador
 *** Test Cases ***
 CT1 - Realizar login 
 	[Documentation]    Esse teste verifica o login de um usuario
-	[Tags]             login_ativo
-	Acessar a pagina home do site
-	Digitar no campo usuário o usuário ativo
-	Digitar no campo senha a senha o usuário ativo
-	Acionar o botão entrar
-	Verificar se nome do usuário aparece na tela de boas vindas
-
-CT2 - Realizar cadastro de usuario
-	[Documentation]    Esse teste verifica o cadastro de um usuario 
 	[Tags]             login_inativo
-	Acessar a pagina home do site	
-	Digitar no campo usuário o usuário inativo
-	Digitar no campo senha a senha o usuário inativo
-	Acionar o botão entrar
-	Verificar mensagem de falha no login
-
-
+	Acessar a pagina de login do site
+	Digitar no campo email
+	Digitar no campo senha a senha 
+	Acionar o botão login
+	Acessar a pagina de cadastro de corretor
+	Digitar no campo nome de cadastro 
+	Digitar no campo email de cadastro
+	Digitar no campo cpf de cadastro
+	Digitar no campo creci de cadastro
+	Digitar no campo telefone de cadastro
+	Digitar no campo senha de cadastro 
+	Digitar no campo confirmação de senha de cadastro
 
