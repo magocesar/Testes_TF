@@ -3,10 +3,11 @@ Library	SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}	chrome 
-${URL}		http://165.227.93.41/lojinha-web/
-${EMAIL_USER}	rafael@gmail.com
+${URL_HOMEPAGE} http://localhost/Teto-Facil/frontEnd/homepage.php 
+${URL_LOGIN}		 http://localhost/Teto-Facil/frontEnd/loginpage.php
+${URL_CADASTRO_CORRETOR}		http://localhost/Teto-Facil/frontEnd/adminPage.php
+${EMAIL_USER}	admintf@admin
 ${SENHA_LOGIN}		123456
-${SENHA_CONFIRMACAO}	123456
 ${FULL_NAME}	Rafael de Sousa
 ${CPF}	132.776.990-02
 
