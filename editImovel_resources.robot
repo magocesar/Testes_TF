@@ -9,6 +9,7 @@ ${EMAIL_USER}	otavio@gmail
 ${SENHA_LOGIN}		123
 ${NOVA_CIDADE} 		Curitiba
 ${msgAlertDadosAlterados}		Imóvel atualizado com sucesso
+${NOVO_VALOR}		1000000
 
 
 
@@ -50,6 +51,9 @@ Entrar na pagina do imovel
 Validar mensagem de sucesso
 	${message}=		Handle Alert	Accept
 	Should Be Equal As Strings    ${message}	${msgAlertDadosAlterados}
+
+Alterar valor do imovel
+  Input Text	css:input[name=edit_valor]       text=${NOVO_VALOR}	
 
 
 
