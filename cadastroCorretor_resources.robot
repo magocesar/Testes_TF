@@ -33,7 +33,7 @@ Acessar a pagina de login do site
 Digitar no campo email 
 	Input Text	locator=nomeLogin       text=${EMAIL_USER}
 
-Digitar no campo senha a senha
+Digitar no campo senha a senha 
 	Input Text	locator=senhaLogin          text=${SENHA_LOGIN}
 
 Acionar o botão login
@@ -65,6 +65,19 @@ Digitar no campo confirmação de senha de cadastro
 
 Acionar o botão cadastrar
   Click Element	css:input[name=acao]
+
+Digitar o login do novo corretor 
+	Input Text	locator=nomeLogin       text=${EMAIL_CAD}
+
+Digitar a senha do novo corretor
+	Input Text	locator=senhaLogin          text=${SENHA_CAD}
+
+Digitar login errado de corretor 
+	Input Text	locator=nomeLogin       text=pedro@gmail.com
+
+Digitar senha errada de corretor 
+	Input Text	locator=senhaLogin          text=12
+
 
 
 

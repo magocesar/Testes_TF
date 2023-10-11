@@ -5,9 +5,9 @@ Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT1 - Realizar login 
-	[Documentation]    Esse teste verifica o login de um usuario
-	[Tags]             login_inativo
+CT1 - Realizar cadastro de corretor 
+	[Documentation]    Esse teste realiza o cadastro de um corretor 
+	[Tags]             cadastroCorretor 
 	Acessar a pagina de login do site
 	Digitar no campo email
 	Digitar no campo senha a senha 
@@ -21,3 +21,27 @@ CT1 - Realizar login
 	Digitar no campo senha de cadastro 
 	Digitar no campo confirmação de senha de cadastro
 
+CT2 - Realizar Login com corretor criado 
+	[Documentation]    Esse teste realiza o login de um corretor 
+	[Tags]             loginCorretor 
+	Acessar a pagina de login do site
+	Digitar o login do novo corretor 
+	Digitar a senha do novo corretor 
+	Acionar o botão login
+
+
+CT3 - Realizar login falho de corretor 
+	[Documentation]    Esse teste realiza o login falho de um corretor 
+	[Tags]             loginCorretor emailFail
+	Acessar a pagina de login do site
+	Digitar o login do novo corretor 
+	Digitar a senha do novo corretor 
+	Acionar o botão login
+
+CT4 - Realizar login falho de corretor
+	[Documentation]    Esse teste realiza o login falho de um corretor 
+	[Tags]             loginCorretor senhaFail
+	Acessar a pagina de login do site
+	Digitar login errado de corretor 
+	Digitar senha errada de corretor 
+	Acionar o botão login
