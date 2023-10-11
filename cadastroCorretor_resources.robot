@@ -66,11 +66,15 @@ Digitar no campo confirmação de senha de cadastro
 Acionar o botão cadastrar
   Click Element	css:input[name=acao]
 
+
+
 Digitar o login do novo corretor 
 	Input Text	locator=nomeLogin       text=${EMAIL_CAD}
 
 Digitar a senha do novo corretor
 	Input Text	locator=senhaLogin          text=${SENHA_CAD}
+
+
 
 Digitar login errado de corretor 
 	Input Text	locator=nomeLogin       text=pedro@gmail.com
