@@ -7,7 +7,8 @@ ${URL_LOGIN}		 http://localhost/Teto-Facil/frontEnd/loginpage.php
 ${URL_IMOVEL}		http://localhost/Teto-Facil/frontEnd/meusImoveis.php
 ${EMAIL_USER}	otavio@gmail
 ${SENHA_LOGIN}		123
-${NOVA_CIDADE} curitiba
+${NOVA_CIDADE} 		Curitiba
+${msgAlertDadosAlterados}		Imóvel atualizado com sucesso
 
 
 
@@ -36,11 +37,19 @@ Acionar o botão login
 Acessar a pagina de meus imoveis 
 	Go To	url=${URL_IMOVEL}
 
-Alterar nome da rua 
+Alterar cidade
   Input Text	css:input[name=edit_cidade]       text=${NOVA_CIDADE}
 
-Acionar o botão cadastrar
+Acionar o botão Alterar Dados
   Click Element	locator=updateData
+
+Entrar na pagina do imovel
+  Click Element	locator=//div[contains(@class,'imovelblock')]
+  Capture Page Screenshot
+
+Validar mensagem de sucesso
+	${message}=		Handle Alert	Accept
+	Should Be Equal As Strings    ${message}	${msgAlertDadosAlterados}
 
 
 

@@ -5,7 +5,7 @@ Test Setup       Abrir o navegador
 Test Teardown    Fechar o navegador
 
 *** Test Cases ***
-CT1 - Realizar cadastro de corretor 
+CT1 - Editar dados de Imóvel
 	[Documentation]    Esse teste realiza o cadastro de um corretor 
 	[Tags]             cadastroCorretor 
 	Acessar a pagina de login do site
@@ -13,5 +13,12 @@ CT1 - Realizar cadastro de corretor
 	Digitar no campo senha a senha 
 	Acionar o botão login
 	Acessar a pagina de meus imoveis 
+	Entrar na pagina do imovel
+	Alterar cidade
+	Acionar o botão Alterar Dados
+	Validar mensagem de sucesso
+
+
+	
   
 
