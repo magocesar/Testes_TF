@@ -20,6 +20,8 @@ CT1 - Realizar cadastro de corretor
 	Digitar no campo telefone de cadastro
 	Digitar no campo senha de cadastro 
 	Digitar no campo confirmação de senha de cadastro
+	Acionar o botão cadastrar
+	Aceitar mensagem cadastro realizado com sucesso
 
 CT2 - Realizar Login com corretor criado 
 	[Documentation]    Esse teste realiza o login de um corretor 
@@ -34,9 +36,10 @@ CT3 - Realizar login falho de corretor
 	[Documentation]    Esse teste realiza o login falho de um corretor 
 	[Tags]             loginCorretor emailFail
 	Acessar a pagina de login do site
-	Digitar o login do novo corretor 
+	Digitar login errado de corretor 
 	Digitar a senha do novo corretor 
 	Acionar o botão login
+	Aceitar erro de login
 
 CT4 - Realizar login falho de corretor
 	[Documentation]    Esse teste realiza o login falho de um corretor 
@@ -45,3 +48,4 @@ CT4 - Realizar login falho de corretor
 	Digitar login errado de corretor 
 	Digitar senha errada de corretor 
 	Acionar o botão login
+	Aceitar erro de login

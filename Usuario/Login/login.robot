@@ -9,6 +9,7 @@ ${msgAlertLogin}  E-mail ou senha Inválidos
 ${BROWSER}        Chrome
 ${idLogin}        nomeLogin
 ${idSenha}        senhaLogin
+${msgAlertEmail}  Email não encontrado
 
 *** Test Cases ***
 Realizar Login com Sucesso
@@ -45,7 +46,7 @@ Realizar Login sem e-mail
     Click Button    locator=//button[@type='submit']
     ${message}=    Handle Alert    Accept
     Close Browser
-    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
+    Should Be Equal As Strings    ${message}    ${msgAlertEmail}
 
 Realizar Login sem e-mail e senha
     Open Browser    browser=${BROWSER}
@@ -55,4 +56,4 @@ Realizar Login sem e-mail e senha
     Click Button    locator=//button[@type='submit']
     ${message}=    Handle Alert    Accept
     Close Browser
-    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
+    Should Be Equal As Strings    ${message}    ${msgAlertEmail}

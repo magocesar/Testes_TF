@@ -14,6 +14,8 @@ ${CRECI}	12.1234.12
 ${TELEFONE}	41991900981
 ${SENHA_CAD}	123
 ${SENHA_CONF_CAD}	123
+${msgErroLogin} 	Email não encontrado
+${msgCadastroSucesso}	Corretor cadastrado com sucesso
 
 
 
@@ -64,7 +66,7 @@ Digitar no campo confirmação de senha de cadastro
   Input Text	locator=passwordconfirm       text=${SENHA_CONF_CAD}
 
 Acionar o botão cadastrar
-  Click Element	css:input[name=acao]
+  Click Element	locator=acao
 
 
 
@@ -82,7 +84,13 @@ Digitar login errado de corretor
 Digitar senha errada de corretor 
 	Input Text	locator=senhaLogin          text=12
 
+Aceitar erro de login
+	${message}= 	Handle Alert	Accept
+	Should Be Equal As Strings 	${message}	${msgErroLogin}
 
+Aceitar mensagem cadastro realizado com sucesso
+	${message}= 	Handle Alert	Accept
+	Should Be Equal As Strings 	${message}	${msgCadastroSucesso}
 
 
 
