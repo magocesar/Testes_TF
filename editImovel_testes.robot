@@ -6,7 +6,7 @@ Test Teardown    Fechar o navegador
 
 *** Test Cases ***
 CT1 - Editar dados de Imóvel
-	[Documentation]    Esse teste realiza o cadastro de um corretor 
+	[Documentation]    Esse teste realiza alteração do campo "Cidade" de um Imóvel 
 	[Tags]             cadastroCorretor 
 	
     Dado que o usuário acessa a página de login do site

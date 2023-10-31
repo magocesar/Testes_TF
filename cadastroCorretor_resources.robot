@@ -3,6 +3,7 @@ Library	SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}	chrome 
+${HOME URL}       http://localhost/Teto-Facil/frontEnd/homepage.php
 ${URL_LOGIN}		 http://localhost/Teto-Facil/frontEnd/loginpage.php
 ${URL_CADASTRO_CORRETOR}		http://localhost/Teto-Facil/frontEnd/adminPage.php
 ${EMAIL_USER}	admintf@admin
@@ -29,68 +30,74 @@ Fechar o navegador
 	Capture Page Screenshot
 	Close Browser
 
-Acessar a pagina de login do site
+Dado que o usuário acesse a página de login do site
 	Go To	url=${URL_LOGIN}
 
-Digitar no campo email 
+E o usuário digite o email
 	Input Text	locator=nomeLogin       text=${EMAIL_USER}
 
-Digitar no campo senha a senha 
+E o usuário digite a senha
 	Input Text	locator=senhaLogin          text=${SENHA_LOGIN}
 
-Acionar o botão login
+E o usuário acione o botão login
 	Click Element	locator=sendLoginButton
 
-Acessar a pagina de cadastro de corretor
+E o usuário acesse a página de cadastro de corretor
 	Go To	url=${URL_CADASTRO_CORRETOR}
 
-Digitar no campo nome de cadastro 
+E o usuário digite o nome de cadastro
   Input Text	locator=name        text=${FULL_NAME}
 
-Digitar no campo email de cadastro
+E o usuário digite o email de cadastro
   Input Text	locator=email     text=${EMAIL_CAD}
 
-Digitar no campo cpf de cadastro
+E o usuário digite o CPF de cadastro
   Input Text	locator=cpf       text=${CPF}
 
-Digitar no campo creci de cadastro
+E o usuário digite o CRECI de cadastro
 	Input Text	locator=creci        text=${CRECI}
 
-Digitar no campo telefone de cadastro
+E o usuário digite o telefone de cadastro
 	Input Text	locator=telefone        text=${TELEFONE}
 
-Digitar no campo senha de cadastro 
+E o usuário digite a senha de cadastro
   Input Text	locator=password        text=${SENHA_CAD}
 
-Digitar no campo confirmação de senha de cadastro
+E o usuário digite a confirmação de senha de cadastro
   Input Text	locator=passwordconfirm       text=${SENHA_CONF_CAD}
 
-Acionar o botão cadastrar
+E o usuário acione o botão cadastrar
   Click Element	locator=acao
 
 
 
-Digitar o login do novo corretor 
+E o usuário digite o login do novo corretor 
 	Input Text	locator=nomeLogin       text=${EMAIL_CAD}
 
-Digitar a senha do novo corretor
+E o usuário digite a senha do novo corretor
 	Input Text	locator=senhaLogin          text=${SENHA_CAD}
 
 
 
-Digitar login errado de corretor 
+E o usuário digite o login errado de corretor
 	Input Text	locator=nomeLogin       text=pedro@gmail.com
 
-Digitar senha errada de corretor 
+E o usuário digite a senha errada de corretor
 	Input Text	locator=senhaLogin          text=12
 
-Aceitar erro de login
+Então o usuário deve aceitar a mensagem de erro de login exibida pelo sistema
 	${message}= 	Handle Alert	Accept
 	Should Be Equal As Strings 	${message}	${msgErroLogin}
 
-Aceitar mensagem cadastro realizado com sucesso
+Então o usuário deve aceitar a mensagem de cadastro realizado com sucesso
 	${message}= 	Handle Alert	Accept
 	Should Be Equal As Strings 	${message}	${msgCadastroSucesso}
+
+Então o sistema deve realizar o login com sucesso
+	${current_url}=    Get Location
+    Should Be Equal As Strings    ${current_url}    ${HOME URL}
+    Page Should Contain    Olá, Rafael de Sousa
+    Capture Page Screenshot
 
 
 

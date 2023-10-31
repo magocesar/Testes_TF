@@ -11,20 +11,24 @@ Test Teardown    Fechar o navegador
 CT1 - Realizar Cadstro com Sucesso
     [Documentation]    Caso de teste para realizar cadastro com sucesso
     [Tags]    cadastroCorretor
-    Acessar a página de cadastro
-    Preencher o formulário de cadastro com dados válidos
-    Clicar no botão de cadastro
-    Verificar se o cadastro foi realizado com sucesso
+    Dado que o usuário acesse a página de cadastro
+    E o usuário preenche o formulário de cadastro com dados válidos
+    Quando o usuário clique no botão de cadastro
+    Então o sistema deve verificar se o cadastro foi realizado com sucesso
 
 
-Realizar Cadastro sem CPF
-    Acessar a página de cadastro
-    Preencher o formulário de cadastro sem o campo CPF
-    Clicar no botão de cadastro
-    Verificar se o cadastro sem CPF diferentes não foi realizado
+CT2 - Realizar Cadastro sem CPF
+    [Documentation]    Caso de teste para realizar cadastro sem o campo CPF preenchido
+    [Tags]    cadastroCorretorSemCPF
+    Dado que o usuário acesse a página de cadastro
+    E o usuário preenche o formulário de cadastro sem o campo CPF
+    Quando o usuário clique no botão de cadastro
+    Então o sistema não deve realizar o cadastro
 
-Realizar Cadastro com senhas diferentes
-    Acessar a página de cadastro
-    Preencher o formulário de cadastro com senhas diferentes
-    Clicar no botão de cadastro
-    Verificar se o cadastro com senhas diferentes não foi realizado
+CT3 - Realizar Cadastro com senhas diferentes
+    [Documentation]    Caso de teste para realizar cadastro com senhas diferentes
+    [Tags]    cadastroCorretorSenhaDiferente
+    Dado que o usuário acesse a página de cadastro
+    E o usuário preenche o formulário de cadastro com duas senhas diferentes
+    Quando o usuário clique no botão de cadastro
+    Então o sistema não deve realizar o cadastro com senhas diferentes

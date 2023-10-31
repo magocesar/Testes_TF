@@ -1,6 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary
 Documentation     Casos de Testes para Login de Usuário
+Resource         login_resources.robot
+Test Setup       Abrir o navegador
+Test Teardown    Fechar o navegador
 
 *** Variables ***  
 ${LOGIN URL}      http://localhost/Teto-Facil/frontEnd/loginpage.php
@@ -12,48 +15,34 @@ ${idSenha}        senhaLogin
 ${msgAlertEmail}  Email não encontrado
 
 *** Test Cases ***
-Realizar Login com Sucesso
-    Open Browser    browser=${BROWSER}
-    Maximize Browser Window
-    Go To    url=${LOGIN URL}
-    Input Text    locator=${idLogin}    text=cesar@gmail
-    Input Text    locator=${idSenha}    text=123
-    Capture Page Screenshot
-    Click Button    locator=//button[@type='submit']
-    ${current_url}=    Get Location
-    Should Be Equal As Strings    ${current_url}    ${HOME URL}
-    Page Should Contain    Olá, César Willian Pacheco
-    Capture Page Screenshot
-    Close Browser
+CT1 - Realizar Login com Sucesso
+    [Documentation]    Caso de teste para realizar LOGIN com sucesso
+    [Tags]             login
+    Dado que o usuário acesse a página de login do site
+    E o usuáiro preencha os dados corretamente
+    Quando o usuário clicar no botão de login
+    Então o sistema verifica se o login foi realizado com sucesso
 
-Realizar Login sem senha
-    Open Browser    browser=${BROWSER}
-    Maximize Browser Window
-    Go To    url=${LOGIN URL}
-    Input Text    locator=${idLogin}    text=cesar@gmail
-    Capture Page Screenshot
-    Click Button    locator=//button[@type='submit']
-    ${message}=    Handle Alert    Accept
-    Should Be Equal As Strings    ${message}    ${msgAlertLogin}
-    Close Browser
+CT2 - Realizar Login sem senha  
+    [Documentation]    Caso de teste para tentar realizar login sem senha
+    [Tags]             loginSemSenha
+    Dado que o usuário acesse a página de login do site
+    E o usuário preenche apenas o campo de Email na área de login
+    Quando o usuário clicar no botão de login
+    Então o sistema não deve realizar o login sem senha
 
-Realizar Login sem e-mail
-    Open Browser    browser=${BROWSER}
-    Maximize Browser Window
-    Go To    url=${LOGIN URL}
-    Input Text    locator=${idSenha}    text=123
-    Capture Page Screenshot
-    Click Button    locator=//button[@type='submit']
-    ${message}=    Handle Alert    Accept
-    Close Browser
-    Should Be Equal As Strings    ${message}    ${msgAlertEmail}
+CT3 - Realizar Login sem e-mail
+    [Documentation]    Caso de teste para tentar realizar login sem e-mail
+    [Tags]             loginSemEmail
+    Dado que o usuário acesse a página de login do site
+    E o usuário preenche apenas o campo de Senha na área de login
+    Quando o usuário clicar no botão de login
+    Então o sistema não deve realizar o login sem email
 
-Realizar Login sem e-mail e senha
-    Open Browser    browser=${BROWSER}
-    Maximize Browser Window
-    Go To    url=${LOGIN URL}
-    Capture Page Screenshot
-    Click Button    locator=//button[@type='submit']
-    ${message}=    Handle Alert    Accept
-    Close Browser
-    Should Be Equal As Strings    ${message}    ${msgAlertEmail}
+CT4 - Realizar Login sem e-mail e senha
+    [Documentation]    Caso de teste para tentar realizar login sem senha e e-mail
+    [Tags]             loginSemEmailSenha
+    Dado que o usuário acesse a página de login do site
+    E o usuário não preenche nenhum dos campos na área de login  
+    Quando o usuário clicar no botão de login
+    Então o sistema não deve realizar o login sem email e senha
