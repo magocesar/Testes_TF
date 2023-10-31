@@ -8,28 +8,31 @@ Test Teardown    Fechar o navegador
 CT1 - Editar dados de Imóvel
 	[Documentation]    Esse teste realiza o cadastro de um corretor 
 	[Tags]             cadastroCorretor 
-	Acessar a pagina de login do site
-	Digitar no campo email
-	Digitar no campo senha a senha 
-	Acionar o botão login
-	Acessar a pagina de meus imoveis 
-	Entrar na pagina do imovel
-	Alterar cidade
-	Acionar o botão Alterar Dados
-	Validar mensagem de sucesso
+	
+    Dado que o usuário acessa a página de login do site
+    Quando o usuário digita o email "otavio@gmail" no campo de email
+    E o usuário digita a senha "123" no campo de senha
+    E o usuário aciona o botão "Login"
+    E o usuário acessa a página de "Meus Imóveis"
+    E o usuário entra na página do imóvel
+
+    Quando o usuário altera a cidade do imóvel
+    E o usuário aciona o botão "Alterar Dados"
+    Então o usuário deve ver a mensagem de sucesso
 
 CT2 - Editar valor do Imovel
-	[Documentation]    Esse teste realiza alteração no preço de um corretor 
+	[Documentation]    Esse teste realiza alteração no preço de um Imóvel
 	[Tags]             editarValorImovel
-	Acessar a pagina de login do site
-	Digitar no campo email
-	Digitar no campo senha a senha 
-	Acionar o botão login
-	Acessar a pagina de meus imoveis 
-	Entrar na pagina do imovel
-	Alterar valor do imovel
-	Acionar o botão Alterar Dados
-	Validar mensagem de sucesso
+    Dado que o usuário acessa a página de login do site
+    Quando o usuário digita o email "otavio@gmail" no campo de email
+    E o usuário digita a senha "123" no campo de senha
+    E o usuário aciona o botão "Login"
+    E o usuário acessa a página de "Meus Imóveis"
+    E o usuário entra na página do imóvel
+
+    Quando o usuário altera o valor do imóvel
+    E o usuário aciona o botão "Alterar Dados"
+    Então o usuário deve ver a mensagem de sucesso
 	
   
 

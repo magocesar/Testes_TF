@@ -23,36 +23,37 @@ Fechar o navegador
 	Capture Page Screenshot
 	Close Browser
 
-Acessar a pagina de login do site
+Dado que o usuário acessa a página de login do site
 	Go To	url=${URL_LOGIN}
 
-Digitar no campo email 
+Quando o usuário digita o email "otavio@gmail" no campo de email 
 	Input Text	locator=nomeLogin       text=${EMAIL_USER}
 
-Digitar no campo senha a senha 
+E o usuário digita a senha "123" no campo de senha 
 	Input Text	locator=senhaLogin          text=${SENHA_LOGIN}
 
-Acionar o botão login
+E o usuário aciona o botão "Login"
 	Click Element	locator=sendLoginButton
 
-Acessar a pagina de meus imoveis 
+E o usuário acessa a página de "Meus Imóveis"
 	Go To	url=${URL_IMOVEL}
 
-Alterar cidade
+Quando o usuário altera a cidade do imóvel
   Input Text	css:input[name=edit_cidade]       text=${NOVA_CIDADE}
 
-Acionar o botão Alterar Dados
+E o usuário aciona o botão "Alterar Dados"
   Click Element	locator=updateData
 
-Entrar na pagina do imovel
+E o usuário entra na página do imóvel
+
   Click Element	locator=//div[contains(@class,'imovelblock')]
   Capture Page Screenshot
 
-Validar mensagem de sucesso
+Então o usuário deve ver a mensagem de sucesso
 	${message}=		Handle Alert	Accept
 	Should Be Equal As Strings    ${message}	${msgAlertDadosAlterados}
 
-Alterar valor do imovel
+Quando o usuário altera o valor do imóvel
   Input Text	css:input[name=edit_valor]       text=${NOVO_VALOR}	
 
 
