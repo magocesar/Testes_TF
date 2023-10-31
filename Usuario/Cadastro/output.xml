@@ -1,304 +1,403 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231011 22:49:16.246" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231031 09:11:53.525" rpa="false" schemaversion="4">
 <suite id="s1" name="Cadastro" source="C:\Users\munch\OneDrive\Área de Trabalho\VS Codes\Testes_TF\Usuario\Cadastro\cadastro.robot">
-<test id="s1-t1" name="Realizar Cadstro com Sucesso" line="17">
+<test id="s1-t1" name="CT1 - Realizar Cadstro com Sucesso" line="11">
+<kw name="Abrir o navegador" library="cadastro_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231011 22:49:16.428" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<msg timestamp="20231011 22:49:16.734" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231011 22:49:16.428" endtime="20231011 22:49:18.019"/>
+<msg timestamp="20231031 09:11:53.905" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20231031 09:11:54.418" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231031 09:11:53.905" endtime="20231031 09:11:55.930"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231011 22:49:18.019" endtime="20231011 22:49:18.135"/>
+<status status="PASS" starttime="20231031 09:11:55.930" endtime="20231031 09:11:56.057"/>
 </kw>
+<status status="PASS" starttime="20231031 09:11:53.905" endtime="20231031 09:11:56.057"/>
+</kw>
+<kw name="Acessar a página de cadastro" library="cadastro_resources">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=${CADASTRO URL}</arg>
+<arg>${CADASTRO URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231011 22:49:18.135" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231011 22:49:18.135" endtime="20231011 22:49:18.182"/>
+<msg timestamp="20231031 09:11:56.057" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231031 09:11:56.057" endtime="20231031 09:11:56.114"/>
+</kw>
+<status status="PASS" starttime="20231031 09:11:56.057" endtime="20231031 09:11:56.114"/>
+</kw>
+<kw name="Preencher o formulário de cadastro com dados válidos" library="cadastro_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=name</arg>
+<arg>text=${NOME_CAD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 09:11:56.118" level="INFO">Typing text 'Rodrigo' into text field 'name'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.114" endtime="20231031 09:11:56.235"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idNome}</arg>
-<arg>text=Rodrigo</arg>
+<arg>locator=emailCad</arg>
+<arg>text=${EMAIL_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.183" level="INFO">Typing text 'Rodrigo' into text field 'name'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.182" endtime="20231011 22:49:18.268"/>
+<msg timestamp="20231031 09:11:56.235" level="INFO">Typing text 'rodrigomunch@gmail.com' into text field 'emailCad'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.235" endtime="20231031 09:11:56.329"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idEmail}</arg>
-<arg>text=rodrigo@gmail.com</arg>
+<arg>locator=cpfCad</arg>
+<arg>text=${CPF_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.269" level="INFO">Typing text 'rodrigo@gmail.com' into text field 'emailCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.269" endtime="20231011 22:49:18.338"/>
+<msg timestamp="20231031 09:11:56.330" level="INFO">Typing text '97864531208' into text field 'cpfCad'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.329" endtime="20231031 09:11:56.406"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idCPF}</arg>
-<arg>text=12345678910</arg>
+<arg>locator=senhaCad</arg>
+<arg>text=${SENHA_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.339" level="INFO">Typing text '12345678910' into text field 'cpfCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.338" endtime="20231011 22:49:18.401"/>
+<msg timestamp="20231031 09:11:56.406" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaCad'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.406" endtime="20231031 09:11:56.484"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenha}</arg>
-<arg>text=Rodrigo@1234</arg>
+<arg>locator=senhaConf</arg>
+<arg>text=${SENHA_CONF_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.402" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.402" endtime="20231011 22:49:18.465"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenhaConf}</arg>
-<arg>text=Rodrigo@1234</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.466" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaConf'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.465" endtime="20231011 22:49:18.529"/>
+<msg timestamp="20231031 09:11:56.484" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaConf'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.484" endtime="20231031 09:11:56.567"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:18.663" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:18.529" endtime="20231011 22:49:18.663"/>
+<msg timestamp="20231031 09:11:56.694" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:11:56.567" endtime="20231031 09:11:56.694"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${idButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:18.664" level="INFO">Clicking button 'sendCadButton'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.663" endtime="20231011 22:49:18.812"/>
+<status status="PASS" starttime="20231031 09:11:56.114" endtime="20231031 09:11:56.695"/>
 </kw>
+<kw name="Clicar no botão de cadastro" library="cadastro_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=sendCadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 09:11:56.695" level="INFO">Clicking element 'sendCadButton'.</msg>
+<status status="PASS" starttime="20231031 09:11:56.695" endtime="20231031 09:11:56.767"/>
+</kw>
+<status status="PASS" starttime="20231031 09:11:56.695" endtime="20231031 09:11:56.767"/>
+</kw>
+<kw name="Verificar se o cadastro foi realizado com sucesso" library="cadastro_resources">
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20231011 22:49:18.815" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/homepage.php</msg>
-<status status="PASS" starttime="20231011 22:49:18.812" endtime="20231011 22:49:18.815"/>
+<msg timestamp="20231031 09:11:56.927" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231031 09:11:56.927" level="FAIL">UnexpectedAlertPresentException: Alert Text: Email já cadastrado
+Message: unexpected alert open: {Alert text : Email já cadastrado}
+  (Session info: chrome=118.0.5993.118)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684547D12+55474]
+	(No symbol) [0x00007FF6844B77C2]
+	(No symbol) [0x00007FF68436E0EB]
+	(No symbol) [0x00007FF6843E8132]
+	(No symbol) [0x00007FF6843CEF33]
+	(No symbol) [0x00007FF6843A3D41]
+	(No symbol) [0x00007FF6843A4F84]
+	GetHandleVerifier [0x00007FF6848AB762+3609346]
+	GetHandleVerifier [0x00007FF684901A80+3962400]
+	GetHandleVerifier [0x00007FF6848F9F0F+3930799]
+	GetHandleVerifier [0x00007FF6845E3CA6+694342]
+	(No symbol) [0x00007FF6844C2218]
+	(No symbol) [0x00007FF6844BE484]
+	(No symbol) [0x00007FF6844BE5B2]
+	(No symbol) [0x00007FF6844AEE13]
+	BaseThreadInitThunk [0x00007FFFB7A7257D+29]
+	RtlUserThreadStart [0x00007FFFB984AA58+40]
+</msg>
+<status status="FAIL" starttime="20231031 09:11:56.767" endtime="20231031 09:11:56.927"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${HOME URL}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231011 22:49:18.815" endtime="20231011 22:49:18.816"/>
+<status status="NOT RUN" starttime="20231031 09:11:56.927" endtime="20231031 09:11:56.927"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Olá, Rodrigo</arg>
+<arg>Olá, ${NOME_CAD}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20231011 22:49:18.827" level="INFO">Current page contains text 'Olá, Rodrigo'.</msg>
-<status status="PASS" starttime="20231011 22:49:18.816" endtime="20231011 22:49:18.827"/>
+<status status="NOT RUN" starttime="20231031 09:11:56.927" endtime="20231031 09:11:56.927"/>
 </kw>
+<status status="FAIL" starttime="20231031 09:11:56.767" endtime="20231031 09:11:56.927"/>
+</kw>
+<kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:18.956" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:18.828" endtime="20231011 22:49:18.957"/>
+<msg timestamp="20231031 09:11:57.050" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:11:56.932" endtime="20231031 09:11:57.050"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231011 22:49:18.957" endtime="20231011 22:49:21.052"/>
+<status status="PASS" starttime="20231031 09:11:57.050" endtime="20231031 09:11:59.143"/>
 </kw>
-<status status="PASS" starttime="20231011 22:49:16.427" endtime="20231011 22:49:21.052"/>
+<status status="PASS" starttime="20231031 09:11:56.932" endtime="20231031 09:11:59.143"/>
+</kw>
+<doc>Caso de teste para realizar cadastro com sucesso</doc>
+<tag>cadastroCorretor</tag>
+<status status="FAIL" starttime="20231031 09:11:53.904" endtime="20231031 09:11:59.143">UnexpectedAlertPresentException: Alert Text: Email já cadastrado
+Message: unexpected alert open: {Alert text : Email já cadastrado}
+  (Session info: chrome=118.0.5993.118)
+Stacktrace:
+	GetHandleVerifier [0x00007FF684547D12+55474]
+	(No symbol) [0x00007FF6844B77C2]
+	(No symbol) [0x00007FF68436E0EB]
+	(No symbol) [0x00007FF6843E8132]
+	(No symbol) [0x00007FF6843CEF33]
+	(No symbol) [0x00007FF6843A3D41]
+	(No symbol) [0x00007FF6843A4F84]
+	GetHandleVerifier [0x00007FF6848AB762+3609346]
+	GetHandleVerifier [0x00007FF684901A80+3962400]
+	GetHandleVerifier [0x00007FF6848F9F0F+3930799]
+	GetHandleVerifier [0x00007FF6845E3CA6+694342]
+	(No symbol) [0x00007FF6844C2218]
+	(No symbol) [0x00007FF6844BE484]
+	(No symbol) [0x00007FF6844BE5B2]
+	(No symbol) [0x00007FF6844AEE13]
+	BaseThreadInitThunk [0x00007FFFB7A7257D+29]
+	RtlUserThreadStart [0x00007FFFB984AA58+40]
+</status>
 </test>
-<test id="s1-t2" name="Realizar Cadastro sem CPF" line="34">
+<test id="s1-t2" name="Realizar Cadastro sem CPF" line="20">
+<kw name="Abrir o navegador" library="cadastro_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231011 22:49:21.054" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<msg timestamp="20231011 22:49:21.334" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231011 22:49:21.054" endtime="20231011 22:49:22.426"/>
+<msg timestamp="20231031 09:11:59.148" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20231031 09:11:59.520" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231031 09:11:59.148" endtime="20231031 09:12:00.791"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231011 22:49:22.426" endtime="20231011 22:49:22.538"/>
+<status status="PASS" starttime="20231031 09:12:00.791" endtime="20231031 09:12:00.911"/>
 </kw>
+<status status="PASS" starttime="20231031 09:11:59.143" endtime="20231031 09:12:00.911"/>
+</kw>
+<kw name="Acessar a página de cadastro" library="cadastro_resources">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=${CADASTRO URL}</arg>
+<arg>${CADASTRO URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231011 22:49:22.539" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231011 22:49:22.539" endtime="20231011 22:49:22.677"/>
+<msg timestamp="20231031 09:12:00.911" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231031 09:12:00.911" endtime="20231031 09:12:00.969"/>
+</kw>
+<status status="PASS" starttime="20231031 09:12:00.911" endtime="20231031 09:12:00.969"/>
+</kw>
+<kw name="Preencher o formulário de cadastro sem o campo CPF" library="cadastro_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=name</arg>
+<arg>text=${NOME_CAD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 09:12:00.969" level="INFO">Typing text 'Rodrigo' into text field 'name'.</msg>
+<status status="PASS" starttime="20231031 09:12:00.969" endtime="20231031 09:12:01.090"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idNome}</arg>
-<arg>text=Rodrigo</arg>
+<arg>locator=emailCad</arg>
+<arg>text=${EMAIL_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:22.679" level="INFO">Typing text 'Rodrigo' into text field 'name'.</msg>
-<status status="PASS" starttime="20231011 22:49:22.677" endtime="20231011 22:49:22.763"/>
+<msg timestamp="20231031 09:12:01.092" level="INFO">Typing text 'rodrigomunch@gmail.com' into text field 'emailCad'.</msg>
+<status status="PASS" starttime="20231031 09:12:01.090" endtime="20231031 09:12:01.178"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idEmail}</arg>
-<arg>text=rodrigo@gmail.com</arg>
+<arg>locator=senhaCad</arg>
+<arg>text=${SENHA_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:22.764" level="INFO">Typing text 'rodrigo@gmail.com' into text field 'emailCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:22.763" endtime="20231011 22:49:22.832"/>
+<msg timestamp="20231031 09:12:01.178" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaCad'.</msg>
+<status status="PASS" starttime="20231031 09:12:01.178" endtime="20231031 09:12:01.260"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenha}</arg>
-<arg>text=Rodrigo@1234</arg>
+<arg>locator=senhaConf</arg>
+<arg>text=${SENHA_CONF_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:22.832" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:22.832" endtime="20231011 22:49:22.897"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenhaConf}</arg>
-<arg>text=Rodrigo@1234</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:22.898" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaConf'.</msg>
-<status status="PASS" starttime="20231011 22:49:22.897" endtime="20231011 22:49:22.957"/>
+<msg timestamp="20231031 09:12:01.260" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaConf'.</msg>
+<status status="PASS" starttime="20231031 09:12:01.260" endtime="20231031 09:12:01.344"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:23.093" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:22.957" endtime="20231011 22:49:23.093"/>
+<msg timestamp="20231031 09:12:01.483" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:12:01.344" endtime="20231031 09:12:01.483"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${idButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:23.093" level="INFO">Clicking button 'sendCadButton'.</msg>
-<status status="PASS" starttime="20231011 22:49:23.093" endtime="20231011 22:49:23.142"/>
+<status status="PASS" starttime="20231031 09:12:00.969" endtime="20231031 09:12:01.483"/>
 </kw>
+<kw name="Clicar no botão de cadastro" library="cadastro_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=sendCadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 09:12:01.484" level="INFO">Clicking element 'sendCadButton'.</msg>
+<status status="PASS" starttime="20231031 09:12:01.483" endtime="20231031 09:12:01.528"/>
+</kw>
+<status status="PASS" starttime="20231031 09:12:01.483" endtime="20231031 09:12:01.528"/>
+</kw>
+<kw name="Verificar se o cadastro sem CPF diferentes não foi realizado" library="cadastro_resources">
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${message}</var>
 <arg>Accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20231011 22:49:23.142" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20231011 22:49:23.147" level="INFO">${message} = CPF invalido !   Formato valido: xxx.xxx.xxx-xx</msg>
-<status status="PASS" starttime="20231011 22:49:23.142" endtime="20231011 22:49:23.147"/>
+<msg timestamp="20231031 09:12:01.530" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231031 09:12:01.534" level="INFO">${message} = CPF invalido !   Formato valido: xxx.xxx.xxx-xx</msg>
+<status status="PASS" starttime="20231031 09:12:01.530" endtime="20231031 09:12:01.534"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20231011 22:49:23.151" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/loginpage.php</msg>
-<status status="PASS" starttime="20231011 22:49:23.147" endtime="20231011 22:49:23.151"/>
+<msg timestamp="20231031 09:12:01.541" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/loginpage.php</msg>
+<status status="PASS" starttime="20231031 09:12:01.534" endtime="20231031 09:12:01.544"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${CADASTRO URL}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231011 22:49:23.152" endtime="20231011 22:49:23.153"/>
+<status status="PASS" starttime="20231031 09:12:01.544" endtime="20231031 09:12:01.544"/>
 </kw>
+<status status="PASS" starttime="20231031 09:12:01.530" endtime="20231031 09:12:01.544"/>
+</kw>
+<kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:23.303" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:23.153" endtime="20231011 22:49:23.303"/>
+<msg timestamp="20231031 09:12:01.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:12:01.544" endtime="20231031 09:12:01.680"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231011 22:49:23.303" endtime="20231011 22:49:25.384"/>
+<status status="PASS" starttime="20231031 09:12:01.680" endtime="20231031 09:12:03.764"/>
 </kw>
-<status status="PASS" starttime="20231011 22:49:21.054" endtime="20231011 22:49:25.384"/>
+<status status="PASS" starttime="20231031 09:12:01.544" endtime="20231031 09:12:03.764"/>
+</kw>
+<status status="PASS" starttime="20231031 09:11:59.143" endtime="20231031 09:12:03.765"/>
 </test>
-<test id="s1-t3" name="Realizar Cadastro com senhas diferentes" line="50">
+<test id="s1-t3" name="Realizar Cadastro com senhas diferentes" line="26">
+<kw name="Abrir o navegador" library="cadastro_resources" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231011 22:49:25.386" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
-<msg timestamp="20231011 22:49:25.681" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
-<status status="PASS" starttime="20231011 22:49:25.386" endtime="20231011 22:49:26.853"/>
+<msg timestamp="20231031 09:12:03.765" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg timestamp="20231031 09:12:04.127" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<status status="PASS" starttime="20231031 09:12:03.765" endtime="20231031 09:12:05.371"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231011 22:49:26.853" endtime="20231011 22:49:26.968"/>
+<status status="PASS" starttime="20231031 09:12:05.371" endtime="20231031 09:12:05.491"/>
 </kw>
+<status status="PASS" starttime="20231031 09:12:03.765" endtime="20231031 09:12:05.491"/>
+</kw>
+<kw name="Acessar a página de cadastro" library="cadastro_resources">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>url=${CADASTRO URL}</arg>
+<arg>${CADASTRO URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231011 22:49:26.968" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
-<status status="PASS" starttime="20231011 22:49:26.968" endtime="20231011 22:49:27.014"/>
+<msg timestamp="20231031 09:12:05.491" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231031 09:12:05.491" endtime="20231031 09:12:05.547"/>
+</kw>
+<status status="PASS" starttime="20231031 09:12:05.491" endtime="20231031 09:12:05.551"/>
+</kw>
+<kw name="Preencher o formulário de cadastro com senhas diferentes" library="cadastro_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=name</arg>
+<arg>text=${NOME_CAD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 09:12:05.553" level="INFO">Typing text 'Rodrigo' into text field 'name'.</msg>
+<status status="PASS" starttime="20231031 09:12:05.551" endtime="20231031 09:12:05.665"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idNome}</arg>
-<arg>text=Otavio</arg>
+<arg>locator=emailCad</arg>
+<arg>text=${EMAIL_CAD_2}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.015" level="INFO">Typing text 'Otavio' into text field 'name'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.014" endtime="20231011 22:49:27.107"/>
+<msg timestamp="20231031 09:12:05.665" level="INFO">Typing text 'cesinha@gmail.com' into text field 'emailCad'.</msg>
+<status status="PASS" starttime="20231031 09:12:05.665" endtime="20231031 09:12:05.754"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idEmail}</arg>
-<arg>text=otavio@gmail.com</arg>
+<arg>locator=cpfCad</arg>
+<arg>text=${CPF_CAD_2}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.108" level="INFO">Typing text 'otavio@gmail.com' into text field 'emailCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.107" endtime="20231011 22:49:27.174"/>
+<msg timestamp="20231031 09:12:05.754" level="INFO">Typing text '22222222222' into text field 'cpfCad'.</msg>
+<status status="PASS" starttime="20231031 09:12:05.754" endtime="20231031 09:12:05.829"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idCPF}</arg>
-<arg>text=12345678911</arg>
+<arg>locator=senhaCad</arg>
+<arg>text=${SENHA_CAD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.175" level="INFO">Typing text '12345678911' into text field 'cpfCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.174" endtime="20231011 22:49:27.238"/>
+<msg timestamp="20231031 09:12:05.837" level="INFO">Typing text 'Rodrigo@1234' into text field 'senhaCad'.</msg>
+<status status="PASS" starttime="20231031 09:12:05.829" endtime="20231031 09:12:05.925"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenha}</arg>
-<arg>text=Otavio@1234</arg>
+<arg>locator=senhaConf</arg>
+<arg>text=${SENHA_CONF_CAD_ERRADA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.238" level="INFO">Typing text 'Otavio@1234' into text field 'senhaCad'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.238" endtime="20231011 22:49:27.301"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=${idSenhaConf}</arg>
-<arg>text=Otavio@12345</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.302" level="INFO">Typing text 'Otavio@12345' into text field 'senhaConf'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.302" endtime="20231011 22:49:27.367"/>
+<msg timestamp="20231031 09:12:05.925" level="INFO">Typing text 'Rodrigo@12345' into text field 'senhaConf'.</msg>
+<status status="PASS" starttime="20231031 09:12:05.925" endtime="20231031 09:12:06.012"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:27.499" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:27.367" endtime="20231011 22:49:27.499"/>
+<msg timestamp="20231031 09:12:06.125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:12:06.012" endtime="20231031 09:12:06.130"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>locator=${idButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231011 22:49:27.499" level="INFO">Clicking button 'sendCadButton'.</msg>
-<status status="PASS" starttime="20231011 22:49:27.499" endtime="20231011 22:49:27.546"/>
+<status status="PASS" starttime="20231031 09:12:05.551" endtime="20231031 09:12:06.130"/>
 </kw>
+<kw name="Clicar no botão de cadastro" library="cadastro_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=sendCadButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 09:12:06.130" level="INFO">Clicking element 'sendCadButton'.</msg>
+<status status="PASS" starttime="20231031 09:12:06.130" endtime="20231031 09:12:06.298"/>
+</kw>
+<status status="PASS" starttime="20231031 09:12:06.130" endtime="20231031 09:12:06.298"/>
+</kw>
+<kw name="Verificar se o cadastro com senhas diferentes não foi realizado" library="cadastro_resources">
 <kw name="Handle Alert" library="SeleniumLibrary">
 <var>${message}</var>
 <arg>Accept</arg>
 <doc>Handles the current alert and returns its message.</doc>
-<msg timestamp="20231011 22:49:27.547" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<msg timestamp="20231011 22:49:27.551" level="INFO">${message} = As senhas não são iguais !</msg>
-<status status="PASS" starttime="20231011 22:49:27.547" endtime="20231011 22:49:27.551"/>
+<msg timestamp="20231031 09:12:06.298" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231031 09:12:11.447" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231031 09:12:11.447" level="FAIL">Alert not found in 5 seconds.</msg>
+<status status="FAIL" starttime="20231031 09:12:06.298" endtime="20231031 09:12:11.463"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${message}</arg>
-<arg>As senhas não são iguais !</arg>
+<arg>${msgSenhasDiferentes}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231011 22:49:27.551" endtime="20231011 22:49:27.553"/>
+<status status="NOT RUN" starttime="20231031 09:12:11.463" endtime="20231031 09:12:11.463"/>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <var>${current_url}</var>
 <doc>Returns the current browser window URL.</doc>
-<msg timestamp="20231011 22:49:27.558" level="INFO">${current_url} = http://localhost/Teto-Facil/frontEnd/loginpage.php</msg>
-<status status="PASS" starttime="20231011 22:49:27.553" endtime="20231011 22:49:27.558"/>
+<status status="NOT RUN" starttime="20231031 09:12:11.463" endtime="20231031 09:12:11.463"/>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <arg>${current_url}</arg>
 <arg>${CADASTRO URL}</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20231011 22:49:27.558" endtime="20231011 22:49:27.558"/>
+<status status="NOT RUN" starttime="20231031 09:12:11.463" endtime="20231031 09:12:11.463"/>
 </kw>
+<status status="FAIL" starttime="20231031 09:12:06.298" endtime="20231031 09:12:11.470"/>
+</kw>
+<kw name="Fechar o navegador" library="cadastro_resources" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231011 22:49:27.698" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231011 22:49:27.559" endtime="20231011 22:49:27.698"/>
+<msg timestamp="20231031 09:12:11.591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 09:12:11.470" endtime="20231031 09:12:11.591"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231011 22:49:27.698" endtime="20231011 22:49:29.772"/>
+<status status="PASS" starttime="20231031 09:12:11.591" endtime="20231031 09:12:13.744"/>
 </kw>
-<status status="PASS" starttime="20231011 22:49:25.386" endtime="20231011 22:49:29.772"/>
+<status status="PASS" starttime="20231031 09:12:11.470" endtime="20231031 09:12:13.744"/>
+</kw>
+<status status="FAIL" starttime="20231031 09:12:03.765" endtime="20231031 09:12:13.744">Alert not found in 5 seconds.</status>
 </test>
-<doc>Casos de Testes para Login de Usuário</doc>
-<status status="PASS" starttime="20231011 22:49:16.247" endtime="20231011 22:49:29.773"/>
+<doc>Casos de cadastro para Login de Usuário</doc>
+<status status="FAIL" starttime="20231031 09:11:53.530" endtime="20231031 09:12:13.746"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="0" fail="1" skip="0">cadastroCorretor</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Cadastro">Cadastro</stat>
+<stat pass="1" fail="2" skip="0" id="s1" name="Cadastro">Cadastro</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231011 22:49:16.734" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg timestamp="20231011 22:49:21.334" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg timestamp="20231011 22:49:25.681" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.71); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231031 09:11:54.418" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231031 09:11:59.520" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg timestamp="20231031 09:12:04.127" level="WARN">The chromedriver version (117.0.5938.149) detected in PATH at C:\Users\munch\AppData\Local\Programs\Python\Python312\Scripts\chromedriver.exe might not be compatible with the detected chrome version (118.0.5993.118); currently, chromedriver 118.0.5993.70 is recommended for chrome 118.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
