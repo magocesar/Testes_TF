@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.0 on win32)" generated="20231031 21:07:10.971" rpa="false" schemaversion="4">
+<suite id="s1" name="editImovel testes" source="C:\Users\munch\Desktop\VS Codes\Testes_TF\editImovel_testes.robot">
+<test id="s1-t1" name="CT1 - Editar dados de Imóvel" line="8">
+<kw name="Abrir o navegador" library="editImovel_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231031 21:07:11.126" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231031 21:07:11.126" endtime="20231031 21:07:12.382"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231031 21:07:12.382" endtime="20231031 21:07:12.494"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:11.126" endtime="20231031 21:07:12.494"/>
+</kw>
+<kw name="Dado que o usuário acessa a página de login do site" library="editImovel_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL_LOGIN}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231031 21:07:12.495" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231031 21:07:12.495" endtime="20231031 21:07:12.553"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.495" endtime="20231031 21:07:12.553"/>
+</kw>
+<kw name="Quando o usuário digita o email &quot;otavio@gmail&quot; no campo de email" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=nomeLogin</arg>
+<arg>text=${EMAIL_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:12.557" level="INFO">Typing text 'otavio@gmail' into text field 'nomeLogin'.</msg>
+<status status="PASS" starttime="20231031 21:07:12.555" endtime="20231031 21:07:12.652"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.555" endtime="20231031 21:07:12.652"/>
+</kw>
+<kw name="E o usuário digita a senha &quot;123&quot; no campo de senha" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=senhaLogin</arg>
+<arg>text=${SENHA_LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:12.655" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
+<status status="PASS" starttime="20231031 21:07:12.654" endtime="20231031 21:07:12.721"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.653" endtime="20231031 21:07:12.721"/>
+</kw>
+<kw name="E o usuário aciona o botão &quot;Login&quot;" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=sendLoginButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:12.723" level="INFO">Clicking element 'sendLoginButton'.</msg>
+<status status="PASS" starttime="20231031 21:07:12.722" endtime="20231031 21:07:12.859"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.722" endtime="20231031 21:07:12.859"/>
+</kw>
+<kw name="E o usuário acessa a página de &quot;Meus Imóveis&quot;" library="editImovel_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL_IMOVEL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231031 21:07:12.860" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/meusImoveis.php'</msg>
+<status status="PASS" starttime="20231031 21:07:12.860" endtime="20231031 21:07:12.883"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.860" endtime="20231031 21:07:12.883"/>
+</kw>
+<kw name="E o usuário entra na página do imóvel" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//div[contains(@class,'imovelblock')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:12.884" level="INFO">Clicking element '//div[contains(@class,'imovelblock')]'.</msg>
+<status status="PASS" starttime="20231031 21:07:12.884" endtime="20231031 21:07:12.949"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231031 21:07:13.156" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 21:07:12.950" endtime="20231031 21:07:13.156"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:12.884" endtime="20231031 21:07:13.156"/>
+</kw>
+<kw name="Quando o usuário altera a cidade do imóvel" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=edit_cidade]</arg>
+<arg>text=${NOVA_CIDADE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:13.157" level="INFO">Typing text 'Curitiba' into text field 'css:input[name=edit_cidade]'.</msg>
+<status status="PASS" starttime="20231031 21:07:13.156" endtime="20231031 21:07:13.207"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:13.156" endtime="20231031 21:07:13.207"/>
+</kw>
+<kw name="E o usuário aciona o botão &quot;Alterar Dados&quot;" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=updateData</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:13.208" level="INFO">Clicking element 'updateData'.</msg>
+<status status="PASS" starttime="20231031 21:07:13.208" endtime="20231031 21:07:13.312"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:13.208" endtime="20231031 21:07:13.312"/>
+</kw>
+<kw name="Então o usuário deve ver a mensagem de sucesso" library="editImovel_resources">
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20231031 21:07:13.313" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231031 21:07:13.316" level="INFO">${message} = Imóvel atualizado com sucesso</msg>
+<status status="PASS" starttime="20231031 21:07:13.313" endtime="20231031 21:07:13.316"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${msgAlertDadosAlterados}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231031 21:07:13.316" endtime="20231031 21:07:13.317"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:13.313" endtime="20231031 21:07:13.317"/>
+</kw>
+<kw name="Fechar o navegador" library="editImovel_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231031 21:07:13.431" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 21:07:13.317" endtime="20231031 21:07:13.431"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231031 21:07:13.431" endtime="20231031 21:07:15.510"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:13.317" endtime="20231031 21:07:15.510"/>
+</kw>
+<doc>Esse teste realiza alteração do campo "Cidade" de um Imóvel</doc>
+<tag>cadastroCorretor</tag>
+<status status="PASS" starttime="20231031 21:07:11.125" endtime="20231031 21:07:15.510"/>
+</test>
+<test id="s1-t2" name="CT2 - Editar valor do Imovel" line="23">
+<kw name="Abrir o navegador" library="editImovel_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231031 21:07:15.511" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20231031 21:07:15.511" endtime="20231031 21:07:16.757"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231031 21:07:16.757" endtime="20231031 21:07:16.870"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:15.511" endtime="20231031 21:07:16.871"/>
+</kw>
+<kw name="Dado que o usuário acessa a página de login do site" library="editImovel_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL_LOGIN}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231031 21:07:16.871" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/loginpage.php'</msg>
+<status status="PASS" starttime="20231031 21:07:16.871" endtime="20231031 21:07:16.925"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:16.871" endtime="20231031 21:07:16.925"/>
+</kw>
+<kw name="Quando o usuário digita o email &quot;otavio@gmail&quot; no campo de email" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=nomeLogin</arg>
+<arg>text=${EMAIL_USER}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:16.926" level="INFO">Typing text 'otavio@gmail' into text field 'nomeLogin'.</msg>
+<status status="PASS" starttime="20231031 21:07:16.926" endtime="20231031 21:07:17.001"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:16.925" endtime="20231031 21:07:17.002"/>
+</kw>
+<kw name="E o usuário digita a senha &quot;123&quot; no campo de senha" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>locator=senhaLogin</arg>
+<arg>text=${SENHA_LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:17.003" level="INFO">Typing text '123' into text field 'senhaLogin'.</msg>
+<status status="PASS" starttime="20231031 21:07:17.002" endtime="20231031 21:07:17.060"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.002" endtime="20231031 21:07:17.060"/>
+</kw>
+<kw name="E o usuário aciona o botão &quot;Login&quot;" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=sendLoginButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:17.061" level="INFO">Clicking element 'sendLoginButton'.</msg>
+<status status="PASS" starttime="20231031 21:07:17.061" endtime="20231031 21:07:17.168"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.060" endtime="20231031 21:07:17.168"/>
+</kw>
+<kw name="E o usuário acessa a página de &quot;Meus Imóveis&quot;" library="editImovel_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL_IMOVEL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231031 21:07:17.169" level="INFO">Opening url 'http://localhost/Teto-Facil/frontEnd/meusImoveis.php'</msg>
+<status status="PASS" starttime="20231031 21:07:17.169" endtime="20231031 21:07:17.193"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.169" endtime="20231031 21:07:17.193"/>
+</kw>
+<kw name="E o usuário entra na página do imóvel" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//div[contains(@class,'imovelblock')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:17.194" level="INFO">Clicking element '//div[contains(@class,'imovelblock')]'.</msg>
+<status status="PASS" starttime="20231031 21:07:17.194" endtime="20231031 21:07:17.256"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231031 21:07:17.452" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 21:07:17.256" endtime="20231031 21:07:17.452"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.194" endtime="20231031 21:07:17.452"/>
+</kw>
+<kw name="Quando o usuário altera o valor do imóvel" library="editImovel_resources">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[name=edit_valor]</arg>
+<arg>text=${NOVO_VALOR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:17.453" level="INFO">Typing text '1000000' into text field 'css:input[name=edit_valor]'.</msg>
+<status status="PASS" starttime="20231031 21:07:17.453" endtime="20231031 21:07:17.496"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.453" endtime="20231031 21:07:17.496"/>
+</kw>
+<kw name="E o usuário aciona o botão &quot;Alterar Dados&quot;" library="editImovel_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=updateData</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231031 21:07:17.497" level="INFO">Clicking element 'updateData'.</msg>
+<status status="PASS" starttime="20231031 21:07:17.497" endtime="20231031 21:07:17.547"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.497" endtime="20231031 21:07:17.547"/>
+</kw>
+<kw name="Então o usuário deve ver a mensagem de sucesso" library="editImovel_resources">
+<kw name="Handle Alert" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>Accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20231031 21:07:17.548" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20231031 21:07:17.550" level="INFO">${message} = Imóvel atualizado com sucesso</msg>
+<status status="PASS" starttime="20231031 21:07:17.548" endtime="20231031 21:07:17.551"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${message}</arg>
+<arg>${msgAlertDadosAlterados}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231031 21:07:17.551" endtime="20231031 21:07:17.551"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.547" endtime="20231031 21:07:17.551"/>
+</kw>
+<kw name="Fechar o navegador" library="editImovel_resources" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231031 21:07:17.671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231031 21:07:17.552" endtime="20231031 21:07:17.671"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231031 21:07:17.671" endtime="20231031 21:07:19.762"/>
+</kw>
+<status status="PASS" starttime="20231031 21:07:17.552" endtime="20231031 21:07:19.762"/>
+</kw>
+<doc>Esse teste realiza alteração no preço de um Imóvel</doc>
+<tag>editarValorImovel</tag>
+<status status="PASS" starttime="20231031 21:07:15.511" endtime="20231031 21:07:19.762"/>
+</test>
+<doc>Essa suíte testa o site teto facil</doc>
+<status status="PASS" starttime="20231031 21:07:10.972" endtime="20231031 21:07:19.763"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">cadastroCorretor</stat>
+<stat pass="1" fail="0" skip="0">editarValorImovel</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="editImovel testes">editImovel testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
